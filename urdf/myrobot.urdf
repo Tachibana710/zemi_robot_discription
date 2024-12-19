@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="myrobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.76763667817799E-17 -0.0171485845336211 -1.04748840188325E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.165607893400824" />
+      <inertia
+        ixx="2.65317387554011E-05"
+        ixy="-3.94565152187794E-22"
+        ixz="6.51897714497928E-21"
+        iyy="7.34896596229329E-05"
+        iyz="-2.3896810845762E-23"
+        izz="5.81585267815824E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LL_1">
+    <inertial>
+      <origin
+        xyz="0.00027257635798784 -0.0150774236420123 0.0230904923697639"
+        rpy="0 0 0" />
+      <mass
+        value="0.0101588260627757" />
+      <inertia
+        ixx="9.92706717585344E-07"
+        ixy="2.43548257865977E-14"
+        ixz="-4.64911168063634E-09"
+        iyy="9.92706717585345E-07"
+        iyz="4.64911168063443E-09"
+        izz="4.70243537735178E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/LL_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/LL_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LL_shoulder"
+    type="revolute">
+    <origin
+      xyz="0 -0.075 -0.0038"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LL_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="LL_2">
+    <inertial>
+      <origin
+        xyz="1.10351588977764E-11 -0.0239999999688915 0.00116762029858311"
+        rpy="0 0 0" />
+      <mass
+        value="0.0366515740828531" />
+      <inertia
+        ixx="4.99836520663324E-06"
+        ixy="1.80262126117316E-12"
+        ixz="7.0239549182291E-14"
+        iyy="3.45961425998285E-06"
+        iyz="-2.2005110334657E-15"
+        izz="4.76029985023808E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/LL_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/LL_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LL_elbow"
+    type="revolute">
+    <origin
+      xyz="0.000150000000000244 -0.01535 0.046"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="LL_1" />
+    <child
+      link="LL_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="LL_3">
+    <inertial>
+      <origin
+        xyz="-0.00506893689430646 -0.0150384371444412 0.0233397885137313"
+        rpy="0 0 0" />
+      <mass
+        value="0.00888763132006736" />
+      <inertia
+        ixx="1.07641612412018E-06"
+        ixy="1.21349880281288E-14"
+        ixz="2.38916325471747E-08"
+        iyy="1.10007778721422E-06"
+        iyz="4.64911588454363E-09"
+        izz="4.34149908785613E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/LL_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/LL_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LL_wrist"
+    type="revolute">
+    <origin
+      xyz="0 -0.048 0.0152"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="LL_2" />
+    <child
+      link="LL_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="RR_1">
+    <inertial>
+      <origin
+        xyz="0.000272576357987848 -0.0150774236420123 0.0230904923697639"
+        rpy="0 0 0" />
+      <mass
+        value="0.0101588260627757" />
+      <inertia
+        ixx="9.92706717585345E-07"
+        ixy="2.43548258973788E-14"
+        ixz="-4.64911168063718E-09"
+        iyy="9.92706717585345E-07"
+        iyz="4.64911168063445E-09"
+        izz="4.70243537735178E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/RR_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/RR_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_shoulder"
+    type="revolute">
+    <origin
+      xyz="0 0.075 -0.0038"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="RR_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="RR_2">
+    <inertial>
+      <origin
+        xyz="4.72520980676627E-12 -0.0239999999862903 0.00116762028710718"
+        rpy="0 0 0" />
+      <mass
+        value="0.0366515740532599" />
+      <inertia
+        ixx="4.9983651919492E-06"
+        ixy="1.80785624695528E-12"
+        ixz="7.06315296566302E-14"
+        iyy="3.45961425818012E-06"
+        iyz="-8.89266744167567E-16"
+        izz="4.76029983389391E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/RR_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/RR_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_elbow"
+    type="revolute">
+    <origin
+      xyz="0.000150000000000235 -0.01535 0.046"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="RR_1" />
+    <child
+      link="RR_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="RR_3">
+    <inertial>
+      <origin
+        xyz="0.00506893689430646 -0.0156615628555583 0.0233397885137313"
+        rpy="0 0 0" />
+      <mass
+        value="0.00888763132006736" />
+      <inertia
+        ixx="1.07641612412018E-06"
+        ixy="1.21349877252835E-14"
+        ixz="-2.38916325471745E-08"
+        iyy="1.10007778721422E-06"
+        iyz="-4.64911588454951E-09"
+        izz="4.34149908785613E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/RR_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/RR_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RR_wrist"
+    type="revolute">
+    <origin
+      xyz="0 -0.0479999999999999 -0.0155"
+      rpy="-1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="RR_2" />
+    <child
+      link="RR_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="FL_1">
+    <inertial>
+      <origin
+        xyz="0.000272576357987851 0.0150774236420124 -0.0230904923697638"
+        rpy="0 0 0" />
+      <mass
+        value="0.0101588260627757" />
+      <inertia
+        ixx="9.92706717585345E-07"
+        ixy="-2.43548259009786E-14"
+        ixz="4.64911168063721E-09"
+        iyy="9.92706717585346E-07"
+        iyz="4.64911168063459E-09"
+        izz="4.70243537735178E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_shoulder"
+    type="revolute">
+    <origin
+      xyz="-0.0645 -0.0435 -0.0038"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="FL_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="FL_2">
+    <inertial>
+      <origin
+        xyz="1.10349784865349E-11 -0.0239999999688916 0.00116762029858324"
+        rpy="0 0 0" />
+      <mass
+        value="0.0366515740828531" />
+      <inertia
+        ixx="4.99836520663323E-06"
+        ixy="1.80262126146179E-12"
+        ixz="7.02395492810242E-14"
+        iyy="3.45961425998284E-06"
+        iyz="-2.20050423118435E-15"
+        izz="4.76029985023807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_elbow"
+    type="revolute">
+    <origin
+      xyz="0.000150000000000247 0.0153500000000003 -0.0459999999999999"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="FL_1" />
+    <child
+      link="FL_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="FL_3">
+    <inertial>
+      <origin
+        xyz="-0.0050689368943065 -0.0150384371444413 0.0233397885137312"
+        rpy="0 0 0" />
+      <mass
+        value="0.00888763132006735" />
+      <inertia
+        ixx="1.07641612412018E-06"
+        ixy="1.21349880263451E-14"
+        ixz="2.38916325471761E-08"
+        iyy="1.10007778721422E-06"
+        iyz="4.64911588454726E-09"
+        izz="4.34149908785613E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FL_wrist"
+    type="revolute">
+    <origin
+      xyz="0 -0.048 0.0152000000000002"
+      rpy="1.57079632679489 0 0" />
+    <parent
+      link="FL_2" />
+    <child
+      link="FL_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="FR_1">
+    <inertial>
+      <origin
+        xyz="-0.000272576357987844 -0.0156225763579876 0.0230904923697639"
+        rpy="0 0 0" />
+      <mass
+        value="0.0101588260627757" />
+      <inertia
+        ixx="9.92706717585344E-07"
+        ixy="2.43548258810166E-14"
+        ixz="4.64911168063699E-09"
+        iyy="9.92706717585345E-07"
+        iyz="-4.64911168063448E-09"
+        izz="4.70243537735178E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_shoulder"
+    type="revolute">
+    <origin
+      xyz="-0.0645 0.0435 -0.0345"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="FR_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="FR_2">
+    <inertial>
+      <origin
+        xyz="1.09981017348826E-11 -0.0239999999704085 0.00116762029948228"
+        rpy="0 0 0" />
+      <mass
+        value="0.036651574085985" />
+      <inertia
+        ixx="4.99836520765364E-06"
+        ixy="1.80263872504368E-12"
+        ixz="7.01960838342865E-14"
+        iyy="3.45961425989209E-06"
+        iyz="-2.32312497606273E-15"
+        izz="4.76029985118644E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_elbow"
+    type="revolute">
+    <origin
+      xyz="-0.000150000000000219 -0.0153499999999997 0.0459999999999999"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="FR_1" />
+    <child
+      link="FR_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="FR_3">
+    <inertial>
+      <origin
+        xyz="0.00506893689430652 -0.0156615628555587 0.0233397885137313"
+        rpy="0 0 0" />
+      <mass
+        value="0.00888763132006736" />
+      <inertia
+        ixx="1.07641612412018E-06"
+        ixy="1.21349878115951E-14"
+        ixz="-2.38916325471764E-08"
+        iyy="1.10007778721422E-06"
+        iyz="-4.6491158845475E-09"
+        izz="4.34149908785614E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FR_wrist"
+    type="revolute">
+    <origin
+      xyz="0 -0.0480000000000001 -0.0154999999999998"
+      rpy="-1.57079632679489 0 -3.14159265358979" />
+    <parent
+      link="FR_2" />
+    <child
+      link="FR_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="BL_1">
+    <inertial>
+      <origin
+        xyz="0.000272576357987844 -0.0150774236420123 0.0230904923697639"
+        rpy="0 0 0" />
+      <mass
+        value="0.0101588260627757" />
+      <inertia
+        ixx="9.92706717585345E-07"
+        ixy="2.4354825861125E-14"
+        ixz="-4.64911168063718E-09"
+        iyy="9.92706717585347E-07"
+        iyz="4.64911168063447E-09"
+        izz="4.70243537735178E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/BL_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/BL_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_shoulder"
+    type="revolute">
+    <origin
+      xyz="0.0645 -0.0435 -0.0038"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="BL_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+
+
+
+
+  <link
+    name="BL_2">
+    <inertial>
+      <origin
+        xyz="1.10349784865349E-11 0.0239999999688916 0.00116762029858324"
+        rpy="0 0 0" />
+      <mass
+        value="0.0366515740322333" />
+      <inertia
+        ixx="3.45961425678384E-06"
+        ixy="-1.22626895790549E-16"
+        ixz="-1.8117107993647E-12"
+        iyy="4.76029982244647E-06"
+        iyz="7.09466148622405E-14"
+        izz="4.99836518177378E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_elbow"
+    type="revolute">
+    <origin
+      xyz="0 -0.0153500000000004 0.046"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="BL_1" />
+    <child
+      link="BL_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="BL_3">
+    <inertial>
+      <origin
+        xyz="-0.00506893689430653 -0.0150384371444413 0.0233397885137312"
+        rpy="0 0 0" />
+      <mass
+        value="0.00888763132006735" />
+      <inertia
+        ixx="1.07641612412018E-06"
+        ixy="1.21349878655195E-14"
+        ixz="2.38916325471763E-08"
+        iyy="1.10007778721422E-06"
+        iyz="4.64911588454717E-09"
+        izz="4.34149908785613E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BL_wrist"
+    type="revolute">
+    <origin 
+       xyz="0 -0.048 -0.0152000000000002"
+      rpy="-1.57079632679489 0 3.14159265" />
+    <parent
+      link="BL_2" />
+    <child
+      link="BL_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="BR_1">
+    <inertial>
+      <origin 
+        xyz="-0.000272576357987837 0.0156225763579877 -0.0230904923697639"
+        rpy="0 0 0" />
+      <mass
+        value="0.0101588260627757" />
+      <inertia
+        ixx="9.92706717585345E-07"
+        ixy="-2.43548258710248E-14"
+        ixz="-4.64911168063696E-09"
+        iyy="9.92706717585346E-07"
+        iyz="-4.64911168063455E-09"
+        izz="4.70243537735178E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/BR_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/BR_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_shoulder"
+    type="revolute">
+    <origin
+      xyz="0.0644999999999999 0.0435000000000001 -0.0345"
+      rpy="1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="BR_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="BR_2">
+    <inertial>
+      <!-- <origin
+        xyz="2.95914959203003E-11 0.0138323797005178 -1.09984937823882E-11"
+        rpy="0 0 0" /> -->
+      <origin
+        xyz="1.10349784865349E-11 0.0239999999688916 0.00116762029858324"
+        rpy="0 0 0" />
+      <mass
+        value="0.036651574085985" />
+      <inertia
+        ixx="3.45961425989208E-06"
+        ixy="2.32312496758063E-15"
+        ixz="-1.80263873327485E-12"
+        iyy="4.76029985118644E-06"
+        iyz="7.01960838967022E-14"
+        izz="4.99836520765364E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FR_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_elbow"
+    type="revolute">
+    <origin
+      xyz="0 0.0153500000000004 -0.046"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="BR_1" />
+    <child
+      link="BR_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+  <link
+    name="BR_3">
+    <inertial>
+      <!-- <origin
+        xyz="-0.0694619750845981 -0.000352613235815175 -0.00403266596934289"
+        rpy="0 0 0" /> -->
+      <origin
+        xyz="-0.00506893689430653 -0.0150384371444413 0.0233397885137312"
+        rpy="0 0 0" />
+      <mass
+        value="0.0111714787794906" />
+      <inertia
+        ixx="1.24764460427647E-06"
+        ixy="4.64911588454441E-09"
+        ixz="-1.21349879190198E-14"
+        iyy="7.16048666428673E-07"
+        iyz="-2.38916325471746E-08"
+        izz="1.22398294118243E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://myrobot/meshes/FL_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BR_wrist"
+    type="revolute">
+    <!-- <origin
+      xyz="-0.047 0.10215 0"
+      rpy="3.14159265358979 0 1.5707963267949" /> -->
+    <!-- <origin
+      xyz="-0.0239999999999999 -0.000200000000000134 0"
+      rpy="3.14159265358979 1.5707963267949 0" /> -->
+    <origin 
+       xyz="0 -0.048 -0.0152000000000002"
+      rpy="-1.57079632679489 0 3.14159265" />
+    <parent
+      link="BR_2" />
+    <child
+      link="BR_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
+  </joint>
+</robot>
