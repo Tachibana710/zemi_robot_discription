@@ -365,7 +365,7 @@
     <child
       link="RR_3" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
   </joint>
   <link
@@ -419,7 +419,7 @@
     <child
       link="FL_1" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
   </joint>
   <link
@@ -581,7 +581,7 @@
     <child
       link="FR_1" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
   </joint>
   <link
@@ -689,7 +689,7 @@
     <child
       link="FR_3" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 -1 0" />
     <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
   </joint>
   <link
@@ -801,7 +801,7 @@
     <child
       link="BL_2" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
   </joint>
   <link
@@ -966,7 +966,7 @@
     <child
       link="BR_2" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit effort="0.48" velocity="6.55" lower="-2.35" upper="2.35"/>
   </joint>
   <link
